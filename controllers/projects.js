@@ -10,12 +10,6 @@ config({ path: './config/config.env' });
 // @desc: Add a new project
 // @route: POST /api/v1/projects
 export const createProject = asyncHandler(async (req, res, next) => {
-  // Create an array of technologies from the technologies string
-  const technologiesArray = req.body.technologies.split(',').map(
-    (tech) => tech.trim(),
-  );
-  console.log(technologiesArray);
-
   if (!req.file) {
     return next(new ErrorResponse('Please upload an image', 400));
   }
@@ -35,7 +29,6 @@ export const createProject = asyncHandler(async (req, res, next) => {
   const newProject = {
     image: imageUrl,
     ...req.body,
-    technologies: technologiesArray,
   };
 
   // Create and save the project to the database using Project.create()
