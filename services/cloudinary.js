@@ -3,7 +3,8 @@
 import { config } from 'dotenv';
 import { v2 as cloudinary } from 'cloudinary';
 
-config({ path: './config/config.env' });
+config({ path: './.env' });
+// config({ path: './config/config.env' }); switch to this in dev mode
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
