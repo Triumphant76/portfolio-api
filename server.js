@@ -9,7 +9,7 @@ import projectsRouter from './routes/projects.js';
 import errorHandler from './middleware/error.js';
 import { upload } from './middleware/multer.js';
 // Load env variables
-dotenv.config({ path: './config/config.env' });
+dotenv.config({ path: './.env' });
 
 // Connect to database
 connectDB();
