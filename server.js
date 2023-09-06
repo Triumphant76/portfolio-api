@@ -10,6 +10,7 @@ import errorHandler from './middleware/error.js';
 import { upload } from './middleware/multer.js';
 // Load env variables
 dotenv.config({ path: './.env' });
+// config({ path: './config/config.env' }); switch to this in dev mode
 
 // Connect to database
 connectDB();

@@ -6,6 +6,7 @@ import uploader from '../services/cloudinary.js';
 import { bufferToDataUri } from '../middleware/multer.js';
 
 config({ path: './.env' });
+// config({ path: './config/config.env' }); switch to this in dev mode
 
 // @desc: Add a new project
 // @route: POST /api/v1/projects
